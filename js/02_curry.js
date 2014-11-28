@@ -1,5 +1,17 @@
 // example:
-function curryExample() {
+function curryExample1() {
+  var add = R.curry(function(a, b) {
+    return a + b;
+  });
+  log("2 + 3 ==", add(2, 3));
+
+  var sumWith10 = add(10);
+  log("sumWith10(20) ==", sumWith10(20));
+}
+//curryExample1();
+
+
+function curryExample2() {
   var result = R.multiply(2, 3);
   log("2 * 3 ==", result);
 
@@ -7,7 +19,8 @@ function curryExample() {
   log("double(9) ==", double(9));
   log("double(-7) ==", double(-7));
 }
-//curryExample();
+//curryExample2();
+
 
 /**
  * Implement getNameTask
